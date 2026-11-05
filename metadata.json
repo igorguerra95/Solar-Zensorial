@@ -1,0 +1,6 @@
+{
+  "name": "GitHub Pages Ready App",
+  "description": "Aplicação web configurada e preparada para publicação estática contínua no GitHub Pages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
