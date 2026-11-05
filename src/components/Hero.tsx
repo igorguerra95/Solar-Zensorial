@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowUpRight, ShieldCheck, HeartHandshake, Compass, Sparkles } from 'lucide-react';
+import heroImage from '../assets/images/hero_zensorial_space_1793906046168.jpg';
 
 interface HeroProps {
   onContactClick: () => void;
@@ -112,7 +113,7 @@ export const Hero: React.FC<HeroProps> = ({ onContactClick, onExploreAreasClick 
               {/* Main Photo Container */}
               <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(6,78,59,0.12)] border border-[#E8E5DD] bg-[#F4F1EA]">
                 <img
-                  src="/src/assets/images/hero_zensorial_space_1793906046168.jpg"
+                  src={heroImage}
                   alt="Consultório acolhedor de psicologia e terapias integrativas Solar Zensorial"
                   className="w-full h-[420px] sm:h-[480px] lg:h-[520px] object-cover hover:scale-103 transition-transform duration-700 ease-out"
                   loading="eager"

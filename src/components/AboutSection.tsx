@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Shield, Sparkles, Feather, Heart, ArrowUpRight } from 'lucide-react';
+import therapistImage from '../assets/images/therapist_portrait_consulting_1793906047193.jpg';
+import detailImage from '../assets/images/sensorial_session_detail_1793906046649.jpg';
 
 interface AboutSectionProps {
   onContactClick: () => void;
@@ -46,7 +48,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
             {/* Primary Portrait Card */}
             <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(6,78,59,0.1)] border border-[#E8E5DD] bg-white">
               <img
-                src="/src/assets/images/therapist_portrait_consulting_1793906047193.jpg"
+                src={therapistImage}
                 alt="Psicóloga clínica acolhedora no consultório Solar Zensorial"
                 className="w-full h-[460px] sm:h-[500px] object-cover object-top hover:scale-102 transition-transform duration-700"
                 loading="lazy"
@@ -72,7 +74,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
             {/* Overlapping secondary aesthetic detail card */}
             <div className="hidden sm:block absolute -bottom-8 -right-8 w-48 h-48 rounded-2xl overflow-hidden border-2 border-white shadow-xl">
               <img
-                src="/src/assets/images/sensorial_session_detail_1793906046649.jpg"
+                src={detailImage}
                 alt="Detalhes sensoriais do atendimento terapêutico com chá calmante e difusor"
                 className="w-full h-full object-cover"
                 loading="lazy"
