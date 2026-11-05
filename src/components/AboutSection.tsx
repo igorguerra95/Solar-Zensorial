@@ -45,39 +45,43 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onContactClick }) =>
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="lg:col-span-5 relative"
           >
-            {/* Primary Portrait Card */}
-            <div className="relative rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(6,78,59,0.1)] border border-[#E8E5DD] bg-white">
+            {/* Primary Portrait Card: Adaptive for mobile, tablet, and desktop */}
+            <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_12px_36px_rgba(6,78,59,0.08)] md:shadow-[0_20px_50px_rgba(6,78,59,0.1)] border border-[#E8E5DD] bg-white">
               <img
                 src={therapistImage}
                 alt="Psicóloga clínica acolhedora no consultório Solar Zensorial"
-                className="w-full h-[460px] sm:h-[500px] object-cover object-top hover:scale-102 transition-transform duration-700"
+                className="w-full h-[280px] xs:h-[320px] sm:h-[400px] md:h-[460px] lg:h-[500px] object-cover object-top hover:scale-102 transition-transform duration-700"
                 loading="lazy"
+                decoding="async"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 38vw"
                 referrerPolicy="no-referrer"
               />
-              <div className="p-6 bg-white border-t border-[#E8E5DD]">
-                <div className="flex items-center justify-between">
+              <div className="p-4 sm:p-5 lg:p-6 bg-white border-t border-[#E8E5DD]">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
                   <div>
-                    <h4 className="font-serif text-xl font-medium text-[#0A261C]">
+                    <h4 className="font-serif text-lg sm:text-xl font-medium text-[#0A261C]">
                       Corpo Clínico Especializado
                     </h4>
                     <p className="text-xs text-[#064E3B] font-medium mt-0.5">
                       Psicologia Clínica Integrativa · CRP Ativo
                     </p>
                   </div>
-                  <span className="text-[11px] uppercase tracking-wider text-[#D4AF37] font-semibold bg-[#FCFAF4] px-3 py-1 rounded-full border border-[#D4AF37]/30">
+                  <span className="self-start sm:self-auto text-[10px] sm:text-[11px] uppercase tracking-wider text-[#D4AF37] font-semibold bg-[#FCFAF4] px-2.5 py-1 sm:px-3 sm:py-1 rounded-full border border-[#D4AF37]/30 whitespace-nowrap">
                     Acolhimento Humanizado
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Overlapping secondary aesthetic detail card */}
-            <div className="hidden sm:block absolute -bottom-8 -right-8 w-48 h-48 rounded-2xl overflow-hidden border-2 border-white shadow-xl">
+            {/* Overlapping secondary aesthetic detail card: Calibrated for mobile, tablet, and desktop */}
+            <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-4 md:-bottom-8 md:-right-6 w-24 h-24 xs:w-28 xs:h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-48 lg:h-48 rounded-xl sm:rounded-2xl overflow-hidden border-2 sm:border-4 border-white shadow-xl z-10 bg-[#FAF8F3]">
               <img
                 src={detailImage}
                 alt="Detalhes sensoriais do atendimento terapêutico com chá calmante e difusor"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 loading="lazy"
+                decoding="async"
+                sizes="(max-width: 640px) 112px, (max-width: 1024px) 176px, 192px"
                 referrerPolicy="no-referrer"
               />
             </div>

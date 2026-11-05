@@ -110,28 +110,30 @@ export const Hero: React.FC<HeroProps> = ({ onContactClick, onExploreAreasClick 
               {/* Outer decorative gold border line */}
               <div className="absolute -inset-2 rounded-3xl border border-[#D4AF37]/30 pointer-events-none -z-10" />
 
-              {/* Main Photo Container */}
-              <div className="relative rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(6,78,59,0.12)] border border-[#E8E5DD] bg-[#F4F1EA]">
+              {/* Main Photo Container: Adaptive across mobile (375px+), tablet (640-1024px) and desktop (1024px+) */}
+              <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-[0_12px_36px_rgba(6,78,59,0.1)] md:shadow-[0_20px_50px_rgba(6,78,59,0.12)] border border-[#E8E5DD] bg-[#F4F1EA]">
                 <img
                   src={heroImage}
                   alt="Consultório acolhedor de psicologia e terapias integrativas Solar Zensorial"
-                  className="w-full h-[420px] sm:h-[480px] lg:h-[520px] object-cover hover:scale-103 transition-transform duration-700 ease-out"
+                  className="w-full h-[260px] xs:h-[300px] sm:h-[380px] md:h-[440px] lg:h-[520px] object-cover object-center hover:scale-102 transition-transform duration-700 ease-out"
                   loading="eager"
+                  decoding="async"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 42vw"
                   referrerPolicy="no-referrer"
                 />
 
                 {/* Subtle scrim at bottom */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent pointer-events-none" />
 
-                {/* Overlay Card: Ambient Sanctuary Detail */}
-                <div className="absolute bottom-5 left-5 right-5 p-4 rounded-xl bg-[#FDFBF7]/95 backdrop-blur-md border border-[#E8E5DD] shadow-lg">
-                  <div className="flex items-start justify-between gap-3">
+                {/* Overlay Card: Ambient Sanctuary Detail - Scaled for mobile, tablet, and desktop */}
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 lg:bottom-5 lg:left-5 lg:right-5 p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-[#FDFBF7]/95 backdrop-blur-md border border-[#E8E5DD] shadow-lg">
+                  <div className="flex items-start justify-between gap-2.5">
                     <div>
-                      <div className="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-[#064E3B]">
-                        <Sparkles className="w-3.5 h-3.5 text-[#D4AF37]" />
+                      <div className="flex items-center gap-1.5 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-[#064E3B]">
+                        <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#D4AF37]" />
                         <span>Espaço Terapêutico Integrado</span>
                       </div>
-                      <p className="mt-1 text-xs text-[#3A4E44] leading-relaxed">
+                      <p className="mt-0.5 sm:mt-1 text-[11px] sm:text-xs text-[#3A4E44] leading-relaxed line-clamp-2 sm:line-clamp-none">
                         Ambiente sensorial projetado para proporcionar desaceleração imediata e segurança emocional.
                       </p>
                     </div>
